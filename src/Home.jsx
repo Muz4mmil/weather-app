@@ -47,25 +47,25 @@ function Home() {
         <div className="weather">
             <div className="search">
                 <input type="text" placeholder='Enter City Name' onChange={ e => setName(e.target.value)}/>
-                <button type='submit' onClick={handleClick}><img src="./public/search.png" alt="" /></button>
+                <button type='submit' onClick={handleClick}><img src="./search.png" alt="" /></button>
             </div>
             <div className="error">{err}</div>
             <div className="winfo">
                 <div className="icon">
-                    <img src={`./public/svgs/${data.weather[0].main}.svg`} alt=""/>
+                    <img src={`./svgs/${data.weather[0].main}.svg`} alt=""/>
                 </div>
                 <h1>{Math.round(data.celcius)}°c</h1>
                 <h2>{data.name}</h2>
                 <div className="details">
                     <div className="col">
-                        <img src="./public/humidity.webp" alt="" />
+                        <img src="./humidity.webp" alt="" />
                         <div className='humidity'>
                             <p>{Math.round(data.humidity)}%</p>
                             <p>Humidity</p>
                         </div>
                     </div>
                     <div className="col">
-                        <img src="./public/wind.png" alt="" />
+                        <img src="./wind.png" alt="" />
                         <div className='wind'>
                             <p>{Math.round(data.speed)} km/h</p>
                             <p>Wind</p>
