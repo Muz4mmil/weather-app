@@ -41,9 +41,15 @@ function Home() {
         }
     }
 
+    const containerCss = {
+                backgroundImage: data.weather[0].main == 'Rain' ? `url('./Bgs/${data.weather[0].main}.gif')` : `url('./Bgs/${data.weather[0].main}.jpg')`,
+                // backgroundSize: 'cover',
+                // backgroundRepeat: 'no-repeat',
+            };
+
 
   return (
-    <div className="container">
+    <div className="container" style={containerCss}>
         <div className="weather">
             <div className="search">
                 <input type="text" placeholder='Enter City Name' onChange={ e => setName(e.target.value)}/>
